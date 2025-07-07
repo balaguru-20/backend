@@ -37,7 +37,7 @@ pipeline{
                 scannerHome = tool 'sonar-scanner-7.1'
             }
             steps{
-                withSonarQubeEnv(credentials: 'sonar-auth'){
+                withSonarQubeEnv('sonar-scanner-7.1'){
                     sh "${scannerHome}/bin/sonar-scanner"
                     // This is generic command works for any language
                 }
