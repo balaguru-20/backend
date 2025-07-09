@@ -5,7 +5,7 @@ def configMap = [
     component: "backend"
 ]
 
-if ( ! env.BRANCH_NAME.eqalsIgnoreCase('main')){
+if ( ! env.BRANCH_NAME.equalsIgnoreCase('main')){
     nodeJSEKSPipeline(configMap)
 }
 else{
